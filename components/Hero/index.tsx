@@ -1,14 +1,18 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 const Hero = () => {
     return (
         <div className="relative">
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
+            <div className="absolute inset-x-0 bottom-0 h-1/2" />
             <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
                     <div className="absolute inset-0">
-                        <img
-                            className="h-full w-full object-cover"
+                        <Image
+                            fill
+                            style={{ objectFit: 'cover' }}
                             src="/plyometrie-soccer.jpg"
-                            alt="People working on laptops"
+                            alt="Plyometrics soccer"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-amber-800 to-amber-700 mix-blend-multiply" />
                     </div>
@@ -22,12 +26,12 @@ const Hero = () => {
                         </p>
                         <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                             <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-1 sm:gap-5 sm:space-y-0">
-                                <a
+                                <Link
                                     href="/periodization"
                                     className="flex items-center justify-center rounded-md border border-transparent bg-amber-500 bg-opacity-80 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-90 sm:px-8"
                                 >
                                     Start mijn trainingsschema
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

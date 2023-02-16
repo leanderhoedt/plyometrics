@@ -1,4 +1,5 @@
-import { Fragment } from 'react'
+import { Fragment } from 'react';
+import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react'
 import {
     ArrowUturnLeftIcon,
@@ -90,9 +91,9 @@ const Header = () => {
             <Popover className="relative">
                 <div className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:justify-start md:space-x-10 lg:px-8">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="/">
+                        <Link href="/">
                             <span className="font-bold text-3xl text-gray-900">Plyometrie</span>
-                        </a>
+                        </Link>
                     </div>
                     <div className="-my-2 -mr-2 md:hidden">
                         <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -104,9 +105,13 @@ const Header = () => {
                         {
                             navItems.map(({ title, href }) => {
                                 return (
-                                    <a href={href} className="text-base font-medium text-gray-800 hover:text-gray-900 hover:underline">
+                                    <Link
+                                        key={href}
+                                        href={href}
+                                        className="text-base font-medium text-gray-800 hover:text-gray-900 hover:underline"
+                                    >
                                         {title}
-                                    </a>
+                                    </Link>
                                 )
                             })
                         }
@@ -146,9 +151,13 @@ const Header = () => {
                                     {
                                         navItems.map(({ title, href }) => {
                                             return (
-                                                <a href={href} className="text-base font-medium text-gray-900 hover:text-gray-700">
+                                                <Link
+                                                    key={href}
+                                                    href={href}
+                                                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                                                >
                                                     {title}
-                                                </a>
+                                                </Link>
                                             )
                                         })
                                     }

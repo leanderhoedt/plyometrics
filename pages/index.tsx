@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Inter } from '@next/font/google'
 import Hero from '@/components/Hero';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +18,7 @@ export default function Home() {
         <Hero />
 
         <div className="relative overflow-hidden pt-16 pb-32">
-          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100" />
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48" />
           <div className="relative">
             <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-12 lg:gap-12 lg:px-8">
               <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-8 lg:px-0 lg:col-span-7">
@@ -41,7 +42,8 @@ export default function Home() {
               </div>
               <div className="mt-12 py-2 sm:py-36 sm:mt-16 lg:mt-0 lg:col-span-5">
                 <div className="px-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-                  <img
+                  <Image
+                    fill
                     className="w-full rounded-xl shadow-xl shadow-amber-200 ring-2 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
                     src="/lukaku.png"
                     alt="Lukaku"

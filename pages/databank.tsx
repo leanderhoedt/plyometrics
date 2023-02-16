@@ -35,13 +35,14 @@ const Databank = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
                 <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {
                         videos.map(({ embedId }) => {
                             return (
-                                <li className="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow">
+                                <li key={embedId} className="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow">
                                     <YoutubeEmbed
+                                        key={embedId}
                                         embedId={embedId}
                                     />
                                 </li>
