@@ -50,7 +50,7 @@ const Periodization = () => {
                                 <br />
                                 <b>Chronische load</b> = de load van de afgelopen 28 dagen (de load waarop de spelers zijn
                                 voorbereid de afgelopen 28 dagen)
-                                <br/>
+                                <br />
                                 <b>A/C-ratio</b> = acute load gedeeld door de chronische load
                                 Het is de bedoeling dat de A/C-ratio altijd tussen de <b>0,8-1,2</b> ligt, dan spreken we van een
                                 optimale trainingsload. (Fanchini et al., 2018) (Hulin et al., 2015)
@@ -67,9 +67,9 @@ const Periodization = () => {
                                 Het gehele schema hieronder is opgesteld volgens het OPT-model. Dit model bestaat uit
                                 verschillende fases.
                             </p>
-                            <div className="prose prose-lg prose-indigo mt-6 text-gray-600">
+                            <div className="prose prose-lg prose-indigo mt-6 text-gray-600" style={{ maxWidth: '100%' }}>
                                 <ul>
-                                    <li className="w-96 h-72">
+                                    <li>
                                         <b>Fase 1</b>: Stabilisatie & uithouding. De oefeningen hiervoor worden geïmplementeerd in de <b>WARM-UP</b>.
                                     </li>
                                     <li>
@@ -83,6 +83,19 @@ const Periodization = () => {
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+
+                        <div className="mx-auto max-w-7xl text-lg mt-16">
+                            <h1>
+                                <span className="mt-2 block text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                                    Stap 4: Rustperiodes
+                                </span>
+                            </h1>
+                            <p className="mt-8 text-xl leading-8 text-gray-600">
+                                Rust tussen de <b>reeksen</b>: minimaal <b>30</b> seconden
+                                <br/>
+                                Rust tussen <b>herhalingen</b>: maximaal <b>15</b> seconden
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -28,19 +28,24 @@ export default function Home() {
                       Krachttraining voor betere prestaties en blessurepreventie: wetenschappelijk onderbouwd en praktisch toepasbaar
                     </h2>
                     <p className="mt-4 text-lg text-gray-800">
-                      Als trainer in het amateurvoetbal weet je als geen ander hoe uitdagend het kan zijn om krachttrainingen en plyometrie toe te passen. Tijdgebrek, gebrek aan faciliteiten en onvoldoende trainingen zijn slechts enkele van de vele obstakels waarmee je wordt geconfronteerd.
+                      Krachttrainingen en plyometrie in het amateurvoetbal toepassen is allesbehalve een
+                      makkelijke opgave. Als trainer kamp je met verschillende problemen zoals een gebrek aan
+                      tijd, faciliteiten, te weining trainingen, enzovoort …
+                      Desondanks is het bewezen in de literatuur en aan de hand van vele studies dat plyometrie
+                      een positief effect heeft op de sprongkracht, snelheid, richtingsveranderingen, schotkracht,
+                      … bij voetballers.
                     </p>
                     <p className="mt-4 text-lg text-gray-800">
-                      Toch is het wetenschappelijk bewezen dat plyometrie een positief effect heeft op de sprongkracht, snelheid, richtingsveranderingen, schotkracht en andere belangrijke variabelen die een rol spelen bij de prestaties van spelers in een wedstrijd. Bovendien kan plyometrie ook blessures helpen voorkomen.
-                    </p>
-                    <p className="mt-4 text-lg text-gray-800">
-                      Als we kijken naar de hoogste niveaus van het voetbal, wordt plyometrie al veelvuldig toegepast. Dus waarom zou je het niet ook toepassen in het amateurvoetbal? Ontdek hoe plyometrie kan bijdragen aan de ontwikkeling van jouw team en aan de prestaties van jouw spelers. Lees meer over de resultaten van ons onderzoek naar het effect van plyometrie in het amateurvoetbal en krijg handige tips en tools om deze trainingsmethode succesvol toe te passen.
+                      Deze variabelen spelen een grote rol voor de prestaties van spelers in een
+                      wedstrijd. Verder heeft het ook een belangrijke functie als blessurepreventie. Plyometrie
+                      wordt toegepast in de allerhoogste regionen van het voetbal, dus waarom ook niet op
+                      amateurniveau?
                     </p>
                   </div>
                 </div>
 
               </div>
-              <div className="mt-12 py-2 sm:py-36 sm:mt-16 lg:mt-0 lg:col-span-5">
+              <div className="mt-12 py-2 sm:py-20 sm:mt-16 lg:mt-0 lg:col-span-5">
                 <div className="px-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
                   <Image
                     fill
@@ -61,7 +66,13 @@ export default function Home() {
                       Wat kan je verwachten?
                     </h2>
                     <p className="mt-4 text-lg text-gray-800">
-                      Deze website biedt trainers een wetenschappelijk onderbouwde methode om krachttraining en trainingen voor snelheid en wendbaarheid te integreren in de oefensessies van amateurvoetbalclubs. Het is een gebruiksvriendelijke tool die het hele seizoen door kan worden gebruikt. Op deze website worden enkele stappen doorlopen om een trainingsschema op maat van jouw spelers te ontwikkelen, gebaseerd op het OPT-model en wetenschappelijk onderbouwd. Bovendien biedt onze database met oefeningen de nodige inspiratie voor jouw sessies.
+                      Deze website is opgericht om een wetenschappelijk onderbouwde manier van plyometrie te
+                      integreren in de trainingen van amateurclubs. Het is een simpele tool die je als trainer kan
+                      gebruiken doorheen het hele seizoen. Op deze website overloop je enkele stappen om een
+                      voor jou gepast traniningsschema te verkrijgen die van toepassing is op jouw spelers. Dit
+                      schema is opgebouwd aan de hand van het OPT-model en is wetenschappelijk onderbouwd.
+                      Verder kun je ook de nodige inspiratie opdoen voor uw sessies aan de hand van onze
+                      oefeningen databank.
                     </p>
                   </div>
                 </div>
