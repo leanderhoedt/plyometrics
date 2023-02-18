@@ -47,8 +47,7 @@ export default function Home() {
               </div>
               <div className="mt-12 py-2 sm:py-20 sm:mt-16 lg:mt-0 lg:col-span-5">
                 <div className="px-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-                  <Image
-                    fill
+                  <img
                     className="w-full rounded-xl shadow-xl shadow-amber-200 ring-2 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
                     src="/lukaku.png"
                     alt="Lukaku"
