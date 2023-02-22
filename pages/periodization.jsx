@@ -76,7 +76,7 @@ const Periodization = () => {
                                         <b>Fase 2</b>: Krachtuithouding. In deze fase zullen de spelers voornamelijk <span className="text-emerald-400 font-bold">LAGE</span> sprongen uitvoeren.
                                     </li>
                                     <li>
-                                        <b>Fase 3</b>: Krachtontwikkeling. In deze fase zullen de spelers voornamelijk <span className="text-emerald-400 font-bold">MIDDEL</span> sprongen uitvoeren.
+                                        <b>Fase 3</b>: Krachtontwikkeling. In deze fase zullen de spelers voornamelijk <span className="text-yellow-400 font-bold">MIDDEL</span> sprongen uitvoeren.
                                     </li>
                                     <li>
                                         <b>Fase 4 & 5</b>: combinatie van power en maximale kracht. In deze fase zullen de spelers voornamelijk <span className="text-red-400 font-bold">HOGE</span> sprongen uitvoeren.
