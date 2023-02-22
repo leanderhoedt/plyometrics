@@ -28,9 +28,9 @@ const Periodization = () => {
                             </p>
                             <div className="prose prose-lg prose-indigo mt-6 text-gray-600">
                                 <ul>
-                                    <li>Matchday +1, Matchday +2 = No plyometrics training!</li>
-                                    <li>Matchday +3, Matchday +4= Ideal moment for plyometrics training!</li>
-                                    <li>(Matchday +5= Only if necessary)</li>
+                                    <li>Matchdag +1, Matchdag +2 = Geen plyometrische training!</li>
+                                    <li>Matchdag +3, Matchdag +4 = Ideaal moment voor plyometrische training!</li>
+                                    <li>(Matchdag +5 = Alleen indien nodig)</li>
                                 </ul>
                             </div>
                         </div>
