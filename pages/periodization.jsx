@@ -1,6 +1,15 @@
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import Table from '@/components/Table';
+import { cycles } from '../helpers/databank';
 
 const Periodization = () => {
+    const [currentCycle, setCurrentCycle] = useState({});
+
+    useEffect(() => {
+        setCurrentCycle(cycles[0]);
+    }, []);
+
     return (
         <>
             <Head>
@@ -11,7 +20,11 @@ const Periodization = () => {
             </Head>
             <div>
                 <div className="relative overflow-hidden py-16">
+
                     <div className="relative px-6 lg:px-8">
+                        <Table
+                            data={currentCycle}
+                        />
                         <div className="mx-auto max-w-7xl text-lg">
                             <h1>
                                 <span className="mt-2 block text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
@@ -93,7 +106,7 @@ const Periodization = () => {
                             </h1>
                             <p className="mt-8 text-xl leading-8 text-gray-600">
                                 Rust tussen de <b>reeksen</b>: minimaal <b>30</b> seconden
-                                <br/>
+                                <br />
                                 Rust tussen <b>herhalingen</b>: maximaal <b>15</b> seconden
                             </p>
                         </div>
