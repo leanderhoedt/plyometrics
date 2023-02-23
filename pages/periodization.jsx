@@ -41,9 +41,9 @@ const Periodization = () => {
                             </p>
                             <div className="prose prose-lg prose-indigo mt-6 text-gray-600">
                                 <ul>
-                                    <li>Matchday +1, Matchday +2 = No plyometrics training!</li>
-                                    <li>Matchday +3, Matchday +4= Ideal moment for plyometrics training!</li>
-                                    <li>(Matchday +5= Only if necessary)</li>
+                                    <li>Matchdag +1, Matchdag +2 = Geen plyometrische training!</li>
+                                    <li>Matchdag +3, Matchdag +4 = Ideaal moment voor plyometrische training!</li>
+                                    <li>(Matchdag +5 = Alleen indien nodig)</li>
                                 </ul>
                             </div>
                         </div>
@@ -89,7 +89,7 @@ const Periodization = () => {
                                         <b>Fase 2</b>: Krachtuithouding. In deze fase zullen de spelers voornamelijk <span className="text-emerald-400 font-bold">LAGE</span> sprongen uitvoeren.
                                     </li>
                                     <li>
-                                        <b>Fase 3</b>: Krachtontwikkeling. In deze fase zullen de spelers voornamelijk <span className="text-emerald-400 font-bold">MIDDEL</span> sprongen uitvoeren.
+                                        <b>Fase 3</b>: Krachtontwikkeling. In deze fase zullen de spelers voornamelijk <span className="text-yellow-400 font-bold">MIDDEL</span> sprongen uitvoeren.
                                     </li>
                                     <li>
                                         <b>Fase 4 & 5</b>: combinatie van power en maximale kracht. In deze fase zullen de spelers voornamelijk <span className="text-red-400 font-bold">HOGE</span> sprongen uitvoeren.
