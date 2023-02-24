@@ -88,7 +88,7 @@ const Databank = () => {
                                         width={384}
                                         height={288}
                                     />
-                                    <div className="mt-2 px-2 font-medium">{title}</div>
+                                    <div className="mt-2 px-2 font-medium text-gray-900">{title}</div>
                                 </li>
                             )
                         })
