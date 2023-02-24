@@ -109,7 +109,7 @@ const Periodization = () => {
 
                                 <div className="text-center">
                                     {tableView === 'week' ?
-                                        <span className="font-semibold">Fase {phaseLabels[week]}</span>
+                                        <span className="text-gray-900 font-semibold">Fase {phaseLabels[week]}</span>
                                         : null
                                     }
                                 </div>
