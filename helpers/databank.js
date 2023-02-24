@@ -660,7 +660,7 @@ const cycles = [
 
     const acuteLoad = loadLow + loadMiddle + loadHigh;
     let acRatio;
-    if (acuteLoad && chronicLoad) acRatio = acuteLoad / chronicLoad;
+    if (acuteLoad && chronicLoad) acRatio = (acuteLoad / chronicLoad).toFixed(2);
 
     return {
         ...obj,

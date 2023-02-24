@@ -1,14 +1,49 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import Table from '@/components/Table';
+import Dropdown from '@/components/Dropdown';
 import { cycles } from '../helpers/databank';
 
+
+const lsKeys = {
+    week: 'week',
+    cycle: 'cycle',
+};
+
+const phaseLabels = {
+    1: '2',
+    2: '2',
+    3: '3',
+    4: '3',
+    5: '4 & 5',
+    6: '4 & 5',
+};
+
 const Periodization = () => {
-    const [currentCycle, setCurrentCycle] = useState({});
+    const [currentWeekCycle, setCurrentWeekCycle] = useState({});
+    const [week, setWeek] = useState(1);
+    const [cycle, setCycle] = useState(1);
+    const [tableView, setTableView] = useState('week');
 
     useEffect(() => {
-        setCurrentCycle(cycles[0]);
+        const lsWeek = Number(window.localStorage.getItem(lsKeys.week));
+        const lsCycle = Number(window.localStorage.getItem(lsKeys.cycle));
+        if (lsWeek > 1 && lsWeek < 7) setWeek(lsWeek);
+        if (lsCycle > 1 && lsCycle < 7) setCycle(lsCycle);
     }, []);
+
+    useEffect(() => {
+        setCurrentWeekCycle(cycles.find((c) => c.cycle === cycle && c.week === week));
+    }, [week, cycle]);
+
+    useEffect(() => {
+        window.localStorage.setItem(lsKeys.week, week);
+    }, [week]);
+
+    useEffect(() => {
+        window.localStorage.setItem(lsKeys.cycle, cycle);
+    }, [cycle]);
 
     return (
         <>
@@ -22,10 +57,124 @@ const Periodization = () => {
                 <div className="relative overflow-hidden py-16">
 
                     <div className="relative px-6 lg:px-8">
-                        <Table
-                            data={currentCycle}
-                        />
-                        <div className="mx-auto max-w-7xl text-lg">
+                        <div className={`mx-auto text-lg ${tableView === 'season' ?'' : 'max-w-7xl'}`}>
+                            <div className="pb-2 grid grid-cols-3">
+                                <div className="flex flex-wrap">
+
+                                    {(tableView === 'week' || tableView === 'cycle') ?
+                                        <div className="flex mr-0 sm:mr-4">
+                                            <button
+                                                disabled={cycle === 1}
+                                                onClick={() => setCycle(cycle - 1)}
+                                                className="flex items-center justify-center cursor-pointer h-8 w-8 rounded-full hover:bg-gray-100 disabled:text-gray-400"
+                                            >
+                                                <ChevronLeftIcon className="h-5 w-5" />
+                                            </button>
+                                            <button
+                                                disabled={cycle >= 6}
+                                                onClick={() => setCycle(cycle + 1)}
+                                                className="flex items-center justify-center cursor-pointer h-8 w-8 rounded-full hover:bg-gray-100 disabled:text-gray-400"
+                                            >
+                                                <ChevronRightIcon className="h-5 w-5" />
+                                            </button>
+                                            <span className="ml-1 font-semibold whitespace-nowrap">
+                                                {`Cyclus ${cycle}`}
+                                            </span>
+                                        </div>
+                                        : null
+                                    }
+                                    {tableView === 'week' ?
+                                        <div className="flex">
+                                            <button
+                                                disabled={week === 1}
+                                                onClick={() => setWeek(week - 1)}
+                                                className="flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-100 disabled:text-gray-400"
+                                            >
+                                                <ChevronLeftIcon className="h-5 w-5" />
+                                            </button>
+                                            <button
+                                                disabled={week >= 6}
+                                                onClick={() => setWeek(week + 1)}
+                                                className="flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-100 disabled:text-gray-400"
+                                            >
+                                                <ChevronRightIcon className="h-5 w-5" />
+                                            </button>
+                                            <span className="ml-1 font-semibold whitespace-nowrap">
+                                                {`Week ${week}`}
+                                            </span>
+                                        </div>
+                                        : null
+                                    }
+                                </div>
+
+                                <div className="text-center">
+                                    {tableView === 'week' ?
+                                        <span className="font-semibold">Fase {phaseLabels[week]}</span>
+                                        : null
+                                    }
+                                </div>
+
+                                <div className="text-right">
+                                    <Dropdown
+                                        items={[
+                                            { value: 'week', label: 'Week' },
+                                            { value: 'cycle', label: 'Cycle' },
+                                            { value: 'season', label: 'Season' },
+                                        ]}
+                                        value={tableView}
+                                        onSelect={v => setTableView(v)}
+                                    />
+                                </div>
+                            </div>
+                            {
+                                tableView === 'week' ?
+                                    <Table
+                                        data={currentWeekCycle}
+                                    />
+                                    : null
+                            }
+                            {
+                                tableView === 'cycle' ?
+                                    <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                                        {
+                                            cycles.filter(c => c.cycle === cycle).map((dataCycle => {
+                                                return (
+                                                    <div>
+                                                        <div className="font-semibold mb-1">
+                                                            <span>{`Fase ${phaseLabels[dataCycle?.week]}`}{' / '}{`Week ${dataCycle?.week}`}</span>
+                                                        </div>
+                                                        <Table data={dataCycle} />
+                                                    </div>
+                                                )
+                                            }))
+                                        }
+                                    </div>
+                                    : null
+                            }
+                            {
+                                tableView === 'season' ?
+                                    <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-6">
+                                        {
+                                            cycles.map((dataCycle => {
+                                                return (
+                                                    <div>
+                                                        <div className="font-semibold mb-1">
+                                                            <span>{`Fase ${phaseLabels[dataCycle?.week]}`}{' / '}{`Week ${dataCycle?.week}`}</span>
+                                                        </div>
+                                                        <Table
+                                                            data={dataCycle}
+                                                            size="sm"
+                                                        />
+                                                    </div>
+                                                )
+                                            }))
+                                        }
+                                    </div>
+                                    : null
+                            }
+                        </div>
+
+                        <div className="mx-auto max-w-7xl text-lg mt-16">
                             <h1>
                                 <span className="mt-2 block text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
                                     Stap 1: Wanneer plan je uw plyometrie sessie best in?
