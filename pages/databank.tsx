@@ -81,7 +81,7 @@ const Databank = () => {
                     {
                         videos.map(({ url, title }) => {
                             return (
-                                <li>
+                                <li key={url}>
                                     <ReactPlayer
                                         url={url}
                                         light={true}
