@@ -27,31 +27,31 @@ const headerColors: Record<number, string> = {
 };
 
 const headerPadding: Record<string, string> = {
-    lg: 'px-4 py-3.5',
+    lg: 'px-2 py-1.5 sm:px-4 sm:py-3.5',
     sm: 'px-2 py-1.5',
 };
 
 const headerStartPadding: Record<string, string> = {
-    lg: 'py-3.5 pl-6 pr-4',
+    lg: 'py-1.5 pl-3 pr-2 sm:py-3.5 sm:pl-6 sm:pr-4',
     sm: 'py-1.5 pl-3 pr-2',
 };
 
 const headerEndPadding: Record<string, string> = {
-    lg: 'py-3.5 pl-4 pr-6',
+    lg: 'py-1.5 pl-2 pr-3 sm:py-3.5 sm:pl-4 sm:pr-6',
     sm: 'py-1.5 pl-2 pr-3',
 };
 
 const rowPadding: Record<string, string> = {
-    lg: 'p-4',
+    lg: 'p-2 sm:p-4',
     sm: 'p-2',
 };
 
 const rowStartPadding: Record<string, string> = {
-    lg: 'py-4 pl-6 pr-4',
+    lg: 'py-2 pl-3 pr-2 sm:py-4 sm:pl-6 sm:pr-4',
     sm: 'py-2 pl-3 pr-2',
 };
 const rowEndPadding: Record<string, string> = {
-    lg: 'py-4 pl-4 pr-6',
+    lg: 'py-2 pl-2 pr-3 sm:py-4 sm:pl-4 sm:pr-6',
     sm: 'py-2 pl-2 pr-3',
 };
 
