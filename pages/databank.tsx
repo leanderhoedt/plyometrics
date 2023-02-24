@@ -1,29 +1,70 @@
-import YoutubeEmbed from '@/components/YoutubeEmbed';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 const videos = [
     {
-        embedId: "NQvZv3WKwaw",
-        title: "5 Essential Plyometric Exercises for Footballers"
+        url: "https://youtube.com/shorts/x_EY6nc8w6I",
+        title: "Jumping lunges (middel)"
     }, {
-        embedId: "x84r0G2gYII",
-        title: "10 MIN PLYOMETRIC HIIT WORKOUT - Speed / Vertical Jump Workout"
+        url: "https://youtube.com/shorts/Zxg9gpuCouw",
+        title: "Skater jumps (middel)"
     }, {
-        embedId: "mgolPSBgsMk",
-        title: "Plyometric Training Progression | Go From Beginner to Advanced"
+        url: "https://youtube.com/shorts/pkkxwfoclfs",
+        title: "Kneeling hurdle jump (middel, hoog)"
     }, {
-        embedId: "4VodW4pW0Ic",
-        title: "Plyometric Training Explained"
+        url: "https://youtu.be/hL1-VL0bmuo",
+        title: "Continuous broad jump (hoog)"
     }, {
-        embedId: "ClRrFfog6So",
-        title: "Loopscholing - Reactie, grondvormen van bewegen, wendbaarheid en spiegelen"
+        url: "https://youtu.be/vmZfx0PX2Gk",
+        title: "One leg continuous broad jump (hoog)"
     }, {
-        embedId: "_YudFDcW_Iw",
-        title: "How to Progress Plyometrics | 5 Levels From Beginner to Advanced"
+        url: "https://youtube.com/shorts/uRaJwjqrrcw",
+        title: "Single leg RD jump (middel)"
     }, {
-        embedId: "PKvo7ehkUdk",
-        title: "Best Plyometric Drills for Explosive Power"
-    }
+        url: "https://youtube.com/shorts/wTDzTLJfAIc",
+        title: "Small to big lateral bounds (middel, hoog)"
+    }, {
+        url: "https://youtu.be/cvph47tyuO4",
+        title: "One leg jump (laag, middel, hoog)"
+    }, {
+        url: "https://youtu.be/lF3Od-BgV7Y",
+        title: "Two leg jump (laag, middel, hoog)"
+    }, {
+        url: "https://youtu.be/b2GFyos-N0I",
+        title: "Squat jump (laag, middel, hoog)"
+    }, {
+        url: "https://youtube.com/shorts/bn4CWAaTX_E",
+        title: "Single leg side to side hops (laag, middel, hoog)"
+    }, {
+        url: "https://youtube.com/shorts/oRSXqOAnpTw",
+        title: "Forward and backwords two legged jumps (laag, middel, hoog)"
+    }, {
+        url: "https://youtube.com/shorts/SH33dwMe50Y",
+        title: "Scissor hops (laag, middel)"
+    }, {
+        url: "https://youtu.be/2nx2WUcooXA",
+        title: "Turning jump squats (laag, middel, hoog)"
+    }, {
+        url: "https://youtube.com/shorts/42yiTBThcfY",
+        title: "Seated jumps (middel)"
+    }, {
+        url: "https://youtube.com/shorts/b4qAxmLccnc",
+        title:"Kneeling broad jump into tuck jump (hoog)"
+    }, {
+        url: "https://youtube.com/shorts/v25Bn632Mpo",
+        title: "Lateral double leg hops (laag, middel, hoog)"
+    }, {
+        url: "https://youtube.com/shorts/clYr2Ae2aEY",
+        title: "Box drill (laag, middel, hoog)"
+    }, {
+        url: "https://youtube.com/shorts/JzDowgvr6-8",
+        title: "Skater jumps followed by upward jump (middel, hoog)"
+    }, {
+        url: "https://youtube.com/shorts/sI2j--PN7fY",
+        title: "Stairway weave hops (laag, middel, hoog)"
+    },
 ]
 
 const Databank = () => {
@@ -38,13 +79,16 @@ const Databank = () => {
             <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
                 <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {
-                        videos.map(({ embedId }) => {
+                        videos.map(({ url, title }) => {
                             return (
-                                <li key={embedId} className="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow">
-                                    <YoutubeEmbed
-                                        key={embedId}
-                                        embedId={embedId}
+                                <li>
+                                    <ReactPlayer
+                                        url={url}
+                                        light={true}
+                                        width={384}
+                                        height={288}
                                     />
+                                    <div className="mt-2 px-2 font-medium">{title}</div>
                                 </li>
                             )
                         })
