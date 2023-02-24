@@ -84,6 +84,11 @@ const Databank = () => {
                                 <li key={url}>
                                     <ReactPlayer
                                         url={url}
+                                        config={{
+                                          youtube: {
+                                            playerVars: { controls: 1 }
+                                          }
+                                        }}
                                         light={true}
                                         width={384}
                                         height={288}
