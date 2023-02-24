@@ -139,7 +139,7 @@ const Periodization = () => {
                                         {
                                             cycles.filter(c => c.cycle === cycle).map((dataCycle => {
                                                 return (
-                                                    <div>
+                                                    <div key={dataCycle?.week]}>
                                                         <div className="font-semibold mb-1">
                                                             <span>{`Fase ${phaseLabels[dataCycle?.week]}`}{' / '}{`Week ${dataCycle?.week}`}</span>
                                                         </div>
@@ -157,7 +157,7 @@ const Periodization = () => {
                                         {
                                             cycles.map((dataCycle => {
                                                 return (
-                                                    <div>
+                                                    <div key={dataCycle?.week]}>
                                                         <div className="font-semibold mb-1">
                                                             <span>{`Fase ${phaseLabels[dataCycle?.week]}`}{' / '}{`Week ${dataCycle?.week}`}</span>
                                                         </div>
