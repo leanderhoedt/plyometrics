@@ -66,18 +66,18 @@ const Periodization = () => {
                                             <button
                                                 disabled={cycle === 1}
                                                 onClick={() => setCycle(cycle - 1)}
-                                                className="flex items-center justify-center cursor-pointer h-8 w-8 rounded-full hover:bg-gray-100 disabled:text-gray-400"
+                                                className="flex items-center justify-center cursor-pointer h-8 w-8 rounded-full text-gray-900 hover:bg-gray-100 disabled:text-gray-400"
                                             >
                                                 <ChevronLeftIcon className="h-5 w-5" />
                                             </button>
                                             <button
                                                 disabled={cycle >= 6}
                                                 onClick={() => setCycle(cycle + 1)}
-                                                className="flex items-center justify-center cursor-pointer h-8 w-8 rounded-full hover:bg-gray-100 disabled:text-gray-400"
+                                                className="flex items-center justify-center cursor-pointer h-8 w-8 rounded-full text-gray-900 hover:bg-gray-100 disabled:text-gray-400"
                                             >
                                                 <ChevronRightIcon className="h-5 w-5" />
                                             </button>
-                                            <span className="ml-1 font-semibold whitespace-nowrap">
+                                            <span className="ml-1 font-semibold text-gray-900 whitespace-nowrap">
                                                 {`Cyclus ${cycle}`}
                                             </span>
                                         </div>
@@ -88,18 +88,18 @@ const Periodization = () => {
                                             <button
                                                 disabled={week === 1}
                                                 onClick={() => setWeek(week - 1)}
-                                                className="flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-100 disabled:text-gray-400"
+                                                className="flex items-center justify-center h-8 w-8 rounded-full text-gray-900 hover:bg-gray-100 disabled:text-gray-400"
                                             >
                                                 <ChevronLeftIcon className="h-5 w-5" />
                                             </button>
                                             <button
                                                 disabled={week >= 6}
                                                 onClick={() => setWeek(week + 1)}
-                                                className="flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-100 disabled:text-gray-400"
+                                                className="flex items-center justify-center h-8 w-8 rounded-full text-gray-900 hover:bg-gray-100 disabled:text-gray-400"
                                             >
                                                 <ChevronRightIcon className="h-5 w-5" />
                                             </button>
-                                            <span className="ml-1 font-semibold whitespace-nowrap">
+                                            <span className="ml-1 font-semibold text-gray-900 whitespace-nowrap">
                                                 {`Week ${week}`}
                                             </span>
                                         </div>
