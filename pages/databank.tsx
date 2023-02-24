@@ -6,64 +6,83 @@ const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 const videos = [
     {
         url: "https://youtube.com/shorts/x_EY6nc8w6I",
-        title: "Jumping lunges (middel)"
+        title: "Jumping lunges (middel)",
+        categories: ["middle"]
     }, {
         url: "https://youtube.com/shorts/Zxg9gpuCouw",
-        title: "Skater jumps (middel)"
+        title: "Skater jumps (middel)",
+        categories: ["middle"]
     }, {
         url: "https://youtube.com/shorts/pkkxwfoclfs",
-        title: "Kneeling hurdle jump (middel, hoog)"
+        title: "Kneeling hurdle jump (middel, hoog)",
+        categories: ["middle", "high"]
     }, {
         url: "https://youtu.be/hL1-VL0bmuo",
-        title: "Continuous broad jump (hoog)"
+        title: "Continuous broad jump (hoog)",
+        categories: ["high"]
     }, {
         url: "https://youtu.be/vmZfx0PX2Gk",
-        title: "One leg continuous broad jump (hoog)"
+        title: "One leg continuous broad jump (hoog)",
+        categories: ["high"]
     }, {
         url: "https://youtube.com/shorts/uRaJwjqrrcw",
-        title: "Single leg RD jump (middel)"
+        title: "Single leg RD jump (middel)",
+        categories: ["middle"]
     }, {
         url: "https://youtube.com/shorts/wTDzTLJfAIc",
-        title: "Small to big lateral bounds (middel, hoog)"
+        title: "Small to big lateral bounds (middel, hoog)",
+        categories: ["middle", "high"]
     }, {
         url: "https://youtu.be/cvph47tyuO4",
-        title: "One leg jump (laag, middel, hoog)"
+        title: "One leg jump (laag, middel, hoog)",
+        categories: ["low", "middle", "high"]
     }, {
         url: "https://youtu.be/lF3Od-BgV7Y",
-        title: "Two leg jump (laag, middel, hoog)"
+        title: "Two leg jump (laag, middel, hoog)",
+        categories: ["low", "middle", "high"]
     }, {
         url: "https://youtu.be/b2GFyos-N0I",
-        title: "Squat jump (laag, middel, hoog)"
+        title: "Squat jump (laag, middel, hoog)",
+        categories: ["low", "middle", "high"]
     }, {
         url: "https://youtube.com/shorts/bn4CWAaTX_E",
-        title: "Single leg side to side hops (laag, middel, hoog)"
+        title: "Single leg side to side hops (laag, middel, hoog)",
+        categories: ["low", "middle", "high"]
     }, {
         url: "https://youtube.com/shorts/oRSXqOAnpTw",
-        title: "Forward and backwords two legged jumps (laag, middel, hoog)"
+        title: "Forward and backwords two legged jumps (laag, middel, hoog)",
+        categories: ["low", "middle", "high"]
     }, {
         url: "https://youtube.com/shorts/SH33dwMe50Y",
-        title: "Scissor hops (laag, middel)"
+        title: "Scissor hops (laag, middel)",
+        categories: ["low", "middle"]
     }, {
         url: "https://youtu.be/2nx2WUcooXA",
         title: "Turning jump squats (laag, middel, hoog)"
     }, {
         url: "https://youtube.com/shorts/42yiTBThcfY",
-        title: "Seated jumps (middel)"
+        title: "Seated jumps (middel)",
+        categories: ["middle"]
     }, {
         url: "https://youtube.com/shorts/b4qAxmLccnc",
-        title:"Kneeling broad jump into tuck jump (hoog)"
+        title:"Kneeling broad jump into tuck jump (hoog)",
+        categories: ["high"]
     }, {
         url: "https://youtube.com/shorts/v25Bn632Mpo",
-        title: "Lateral double leg hops (laag, middel, hoog)"
+        title: "Lateral double leg hops (laag, middel, hoog)",
+        categories: ["low", "middle", "high"]
     }, {
         url: "https://youtube.com/shorts/clYr2Ae2aEY",
-        title: "Box drill (laag, middel, hoog)"
+        title: "Box drill (laag, middel, hoog)",
+        categories: ["low", "middle", "high"]
     }, {
         url: "https://youtube.com/shorts/JzDowgvr6-8",
-        title: "Skater jumps followed by upward jump (middel, hoog)"
+        title: "Skater jumps followed by upward jump (middel, hoog)",
+        categories: ["middle", "high"]
     }, {
         url: "https://youtube.com/shorts/sI2j--PN7fY",
-        title: "Stairway weave hops (laag, middel, hoog)"
+        title: "Stairway weave hops (laag, middel, hoog)",
+        categories: ["low", "middle", "high"]
     },
 ]
 
