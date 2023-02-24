@@ -33,7 +33,7 @@ const Dropdown = ({ items = [], onSelect, value }: DropdownProps) => {
                         {
                             items.map(({ label, value }) => {
                                 return (
-                                    <Menu.Item>
+                                    <Menu.Item key={value}>
                                         {({ active }) => (
                                             <a
                                                 href="#"
