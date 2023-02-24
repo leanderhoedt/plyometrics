@@ -140,7 +140,7 @@ const Periodization = () => {
                                             cycles.filter(c => c.cycle === cycle).map((dataCycle => {
                                                 return (
                                                     <div key={dataCycle?.week}>
-                                                        <div className="font-semibold mb-1">
+                                                        <div className="text-gray-900 font-semibold mb-1">
                                                             <span>{`Fase ${phaseLabels[dataCycle?.week]}`}{' / '}{`Week ${dataCycle?.week}`}</span>
                                                         </div>
                                                         <Table data={dataCycle} />
