@@ -2,10 +2,20 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
 import Tooltip from '@/components/Tooltip';
+import { RadioGroup } from '@headlessui/react';
+import { classNames } from '@/helpers';
+import { useState } from 'react';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
-const videos = [
+interface Video {
+    url: string;
+    title: string;
+    categories: string[];
+    description?: string;
+}
+
+const videos: Video[] = [
     {
         url: "https://youtube.com/shorts/x_EY6nc8w6I",
         title: "Jumping lunges",
@@ -109,7 +119,16 @@ const categoryLabels: Record<string, string> = {
     high: 'Hoog',
 };
 
+const filterOptions = [
+    { value: null, label: 'Alles' },
+    { value: 'low', label: categoryLabels.low },
+    { value: 'middle', label: categoryLabels.middle },
+    { value: 'high', label: categoryLabels.high },
+]
+
 const Databank = () => {
+    const [currentCategory, setCurrentCategory] = useState(filterOptions[0]);
+
     return (
         <>
             <Head>
@@ -119,9 +138,37 @@ const Databank = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+                <div className="mb-10">
+                    <RadioGroup value={currentCategory} onChange={setCurrentCategory} className="mt-2">
+                        <RadioGroup.Label className="sr-only"> Choose a memory option </RadioGroup.Label>
+                        <div className="flex gap-2">
+                            {filterOptions.map((option) => (
+                                <RadioGroup.Option
+                                    key={option.label}
+                                    value={option}
+                                    className={({ active, checked }) =>
+                                        classNames(
+                                            'cursor-pointer focus:outline-none',
+                                            active ? 'ring-2 ring-offset-2 ring-gray-600' : '',
+                                            checked
+                                                ? 'bg-gray-700 border-transparent text-white hover:bg-gray-800'
+                                                : 'bg-white border-gray-200 text-gray-900 hover:bg-gray-50',
+                                            'border rounded-md py-3 px-3 text-sm font-medium uppercase'
+                                        )
+                                    }
+                                >
+                                    <RadioGroup.Label as="span">{option.label}</RadioGroup.Label>
+                                </RadioGroup.Option>
+                            ))}
+                        </div>
+                    </RadioGroup>
+                </div>
                 <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {
-                        videos.map(({ url, title, categories, description }) => {
+                        videos.filter(v => {
+                            if (!currentCategory.value) return true;
+                            return v.categories.includes(currentCategory.value);
+                        }).map(({ url, title, categories, description }) => {
                             return (
                                 <li key={url}>
                                     <div className="rounded-md overflow-hidden">
