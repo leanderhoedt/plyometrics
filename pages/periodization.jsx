@@ -188,7 +188,7 @@ const Periodization = () => {
                                 Indien het niet mogelijk is om drie of vier dagen na de wedstrijd de plyometrie sessie in te
                                 plannen, dan plan je het in op vijf dagen na de wedstrijd. (Ramirez-Campillo et al., 2022)
                             </p>
-                            <div className="prose prose-lg prose-indigo mt-6 text-gray-600">
+                            <div className="prose prose-lg prose-amber mt-6 text-gray-600">
                                 <ul>
                                     <li>Matchdag +1, Matchdag +2 = Geen plyometrische training!</li>
                                     <li>Matchdag +3, Matchdag +4 = Ideaal moment voor plyometrische training!</li>
@@ -229,7 +229,7 @@ const Periodization = () => {
                                 Het gehele schema hieronder is opgesteld volgens het OPT-model. Dit model bestaat uit
                                 verschillende fases.
                             </p>
-                            <div className="prose prose-lg prose-indigo mt-6 text-gray-600" style={{ maxWidth: '100%' }}>
+                            <div className="prose prose-lg prose-amber mt-6 text-gray-600" style={{ maxWidth: '100%' }}>
                                 <ul>
                                     <li>
                                         <b>Fase 1</b>: Stabilisatie & uithouding. De oefeningen hiervoor worden geïmplementeerd in de <b>WARM-UP</b>.
