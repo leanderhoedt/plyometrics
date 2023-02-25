@@ -235,13 +235,13 @@ const Periodization = () => {
                                         <b>Fase 1</b>: Stabilisatie & uithouding. De oefeningen hiervoor worden geïmplementeerd in de <b>WARM-UP</b>.
                                     </li>
                                     <li>
-                                        <b>Fase 2</b>: Krachtuithouding. In deze fase zullen de spelers voornamelijk <span className="text-emerald-400 font-bold">LAGE</span> sprongen uitvoeren.
+                                        <b className="text-blue-500">Fase 2</b>: Krachtuithouding. In deze fase zullen de spelers voornamelijk <span className="text-blue-500 font-bold">LAGE</span> sprongen uitvoeren.
                                     </li>
                                     <li>
-                                        <b>Fase 3</b>: Krachtontwikkeling. In deze fase zullen de spelers voornamelijk <span className="text-yellow-400 font-bold">MIDDEL</span> sprongen uitvoeren.
+                                        <b className="text-yellow-500">Fase 3</b>: Krachtontwikkeling. In deze fase zullen de spelers voornamelijk <span className="text-yellow-500 font-bold">MIDDEL</span> sprongen uitvoeren.
                                     </li>
                                     <li>
-                                        <b>Fase 4 & 5</b>: combinatie van power en maximale kracht. In deze fase zullen de spelers voornamelijk <span className="text-red-400 font-bold">HOGE</span> sprongen uitvoeren.
+                                        <b className="text-green-500">Fase 4 & 5</b>: combinatie van power en maximale kracht. In deze fase zullen de spelers voornamelijk <span className="text-green-500 font-bold">HOGE</span> sprongen uitvoeren.
                                     </li>
                                 </ul>
                             </div>

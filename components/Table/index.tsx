@@ -88,29 +88,29 @@ const Table = ({ data: { data, week, acuteLoad, chronicLoad, acRatio }, size = '
                                         <td className={`whitespace-nowrap ${rowStartPadding[size]} font-medium text-gray-900 text-center`}>
                                             {labels[key]}
                                         </td>
-                                        <td className={`whitespace-nowrap ${rowPadding[size]} text-gray-600 text-center`}>{data[key].series}</td>
-                                        <td className={`whitespace-nowrap ${rowPadding[size]} text-gray-600 text-center`}>{data[key].rep}</td>
-                                        <td className={`whitespace-nowrap ${rowPadding[size]} text-gray-600 text-center`}>{data[key].total}</td>
-                                        <td className={`whitespace-nowrap ${rowEndPadding[size]} text-gray-600 sm:pr-0 text-center`}>{data[key].load}</td>
+                                        <td className={`whitespace-nowrap ${rowPadding[size]} text-gray-900 text-center`}>{data[key].series}</td>
+                                        <td className={`whitespace-nowrap ${rowPadding[size]} text-gray-900 text-center`}>{data[key].rep}</td>
+                                        <td className={`whitespace-nowrap ${rowPadding[size]} text-gray-900 text-center`}>{data[key].total}</td>
+                                        <td className={`whitespace-nowrap ${rowEndPadding[size]} text-gray-900 sm:pr-0 text-center`}>{data[key].load}</td>
                                     </tr>
                                 )) : null}
                                 <tr className="divide-x divide-gray-200">
                                     <td colSpan={4} className={`whitespace-nowrap ${rowStartPadding[size]} font-medium text-gray-900 text-center`}>
                                         ACUTE LOAD
                                     </td>
-                                    <td className={`whitespace-nowrap ${rowEndPadding[size]} text-gray-600 sm:pr-0 text-center`}>{acuteLoad}</td>
+                                    <td className={`whitespace-nowrap ${rowEndPadding[size]} text-gray-900 sm:pr-0 text-center`}>{acuteLoad}</td>
                                 </tr>
                                 <tr className="divide-x divide-gray-200">
                                     <td colSpan={4} className={`whitespace-nowrap ${rowStartPadding[size]} font-medium text-gray-900 text-center`}>
                                         CHRONISCHE LOAD
                                     </td>
-                                    <td className={`whitespace-nowrap ${rowEndPadding[size]} text-gray-600 sm:pr-0 text-center`}>{chronicLoad ? chronicLoad : '/'}</td>
+                                    <td className={`whitespace-nowrap ${rowEndPadding[size]} text-gray-900 sm:pr-0 text-center`}>{chronicLoad ? chronicLoad : '/'}</td>
                                 </tr>
                                 <tr className="divide-x divide-gray-200">
                                     <td colSpan={4} className={`whitespace-nowrap ${rowStartPadding[size]} font-medium text-gray-900 text-center`}>
                                         A/C RATIO
                                     </td>
-                                    <td className={`whitespace-nowrap ${rowEndPadding[size]} text-gray-600 sm:pr-0 text-center`}>{acRatio ? acRatio : '/'}</td>
+                                    <td className={`whitespace-nowrap ${rowEndPadding[size]} text-gray-900 sm:pr-0 text-center`}>{acRatio ? acRatio : '/'}</td>
                                 </tr>
                             </tbody>
                         </table>
