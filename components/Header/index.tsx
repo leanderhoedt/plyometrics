@@ -2,15 +2,7 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react'
 import {
-    ArrowUturnLeftIcon,
     Bars3Icon,
-    ChatBubbleLeftEllipsisIcon,
-    DocumentChartBarIcon,
-    HeartIcon,
-    InboxIcon,
-    PencilSquareIcon,
-    TrashIcon,
-    UsersIcon,
     XMarkIcon,
     HomeIcon
 } from '@heroicons/react/24/outline';
@@ -97,7 +89,7 @@ const Header = () => {
                             <div className="py-6 px-5">
                                 <div className="grid grid-cols-2 gap-4">
                                     {
-                                        navItems.map(({ title, href }) => {
+                                        navItems.filter(item => item.title).map(({ title, href }) => {
                                             return (
                                                 <Link
                                                     key={href}
