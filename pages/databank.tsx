@@ -192,7 +192,7 @@ const Databank = () => {
                                             <div className="text-gray-500 font-normal">
                                                 {
                                                     categories?.map(category => (
-                                                        <span className="mr-2 my-1">{categoryLabels[category]}</span>
+                                                        <span key={category} className="mr-2 my-1">{categoryLabels[category]}</span>
                                                     ))
                                                 }
                                             </div>
