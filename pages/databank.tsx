@@ -18,6 +18,7 @@ interface Video {
 const videos: Video[] = [
     {
         url: "https://youtube.com/shorts/x_EY6nc8w6I",
+        thumbnail: "/jumping-lunges.jpg",
         title: "Jumping lunges",
         categories: ["middle"],
         description: "Deze oefening behoort tot de categorie ‘middel’ qua intensiteit."
@@ -174,7 +175,7 @@ const Databank = () => {
                         videos.filter(v => {
                             if (!currentCategory.value) return true;
                             return v.categories.includes(currentCategory.value);
-                        }).map(({ url, title, categories, description }) => {
+                        }).map(({ url, title, categories, description, thumbnail }) => {
                             return (
                                 <li key={url}>
                                     <div className="rounded-md overflow-hidden">
@@ -185,7 +186,7 @@ const Databank = () => {
                                                     playerVars: { controls: 1 }
                                                 }
                                             }}
-                                            light={true}
+                                            light={thumbnail ? <Image src={thumbnail} width={384} height={288} /> : true}
                                             width={384}
                                             height={288}
                                         />
