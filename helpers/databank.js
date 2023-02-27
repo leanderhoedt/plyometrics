@@ -120,7 +120,7 @@ const cycles = [
                 rep: 8,
             },
             high: {
-                series: 5,
+                series: 2,
                 rep: 5
             }
         },
@@ -138,7 +138,7 @@ const cycles = [
                 rep: 8,
             },
             high: {
-                series: 5,
+                series: 2,
                 rep: 5
             }
         },
@@ -148,7 +148,7 @@ const cycles = [
         week: 3,
         data: {
             low: {
-                series: 9,
+                series: 3,
                 rep: 10,
             },
             middle: {
@@ -156,7 +156,7 @@ const cycles = [
                 rep: 8,
             },
             high: {
-                series: 5,
+                series: 2,
                 rep: 5
             }
         },
