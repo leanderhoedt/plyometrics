@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
 import Tooltip from '@/components/Tooltip';
 import { RadioGroup } from '@headlessui/react';
