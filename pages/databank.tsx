@@ -19,97 +19,103 @@ const videos: Video[] = [
     {
         url: "https://youtube.com/shorts/x_EY6nc8w6I",
         title: "Jumping lunges",
-        categories: ["middle"]
+        categories: ["middle"],
+        description: "Deze oefening behoort tot de categorie ‘middel’ qua intensiteit."
     }, {
         url: "https://youtube.com/shorts/Zxg9gpuCouw",
         title: "Skater jumps",
-        categories: ["middle"]
+        categories: ["middle"],
+        description: "Deze oefening behoort tot de categorie ‘middel’ qua intensiteit."
     }, {
         url: "https://youtube.com/shorts/pkkxwfoclfs",
         title: "Kneeling hurdle jump",
         categories: ["middle", "high"],
-        description: "Lorem ipsum"
+        description: () => <div>De oefening die wordt uitgebeeld in het filmpje behoort tot de categorie ‘middel’. Indien je gebruik maakt van een hoger hekje schroef je de intensiteit omhoog naar ‘hoog’.<br />*Maak de oefening sport specifiek door het toevoegen van een bal.</div>
     }, {
         url: "https://youtu.be/hL1-VL0bmuo",
         title: "Continuous broad jump",
         categories: ["high"],
-        description: ""
+        description: "Deze oefening behoort tot de categorie ‘hoog’ qua intensiteit. Elke sprong telt als één herhaling."
     }, {
         url: "https://youtu.be/vmZfx0PX2Gk",
         title: "One leg continuous broad jump",
-        categories: ["high"]
+        categories: ["high"],
+        description: "Deze oefening behoort tot de categorie ‘hoog’ qua intensiteit. Elke sprong telt als één herhaling."
     }, {
         url: "https://youtube.com/shorts/uRaJwjqrrcw",
         title: "Single leg RD jump",
-        categories: ["middle"]
+        categories: ["middle"],
+        description: () => <div>Deze oefening behoort tot de categorie ‘middel’ qua intensiteit.<br />*Maak de oefening sport specifiek door het toevoegen van een bal.</div>
     }, {
         url: "https://youtube.com/shorts/wTDzTLJfAIc",
         title: "Small to big lateral bounds",
         categories: ["middle", "high"],
-        description: "Lorem ipsum"
+        description: "De oefening die wordt uitgebeeld in het filmpje behoort tot de categorie ‘middel’. Indien je gebruik maakt van een hoger hekje schroef je de intensiteit omhoog naar ‘hoog’."
     }, {
         url: "https://youtu.be/cvph47tyuO4",
         title: "One leg jump",
         categories: ["low", "middle", "high"],
-        description: "Lorem ipsum"
+        description: "De oefening die wordt uitgebeeld behoort tot de categorie ‘laag’. Indien je gebruik maakt van een hoger hekje schroef je de intensiteit omhoog naar ‘middel’. Maak je gebruik van een nog hoger hekje is de intensiteit ‘hoog’."
     }, {
         url: "https://youtu.be/lF3Od-BgV7Y",
         title: "Two leg jump",
         categories: ["low", "middle", "high"],
-        description: "Lorem ipsum"
+        description: "De oefening die wordt uitgebeeld behoort tot de categorie ‘laag’. Indien je gebruik maakt van een hoger hekje schroef je de intensiteit omhoog naar ‘middel’. Maak je gebruik van een nog hoger hekje is de intensiteit ‘hoog’."
     }, {
         url: "https://youtu.be/b2GFyos-N0I",
         title: "Squat jump",
         categories: ["low", "middle", "high"],
-        description: "Lorem ipsum"
+        description: "Verhoog telkens de hekjes om de intensiteit van de oefening te verhogen. De voorgetoonde oefening is aan een ‘middel’ intensiteit."
     }, {
         url: "https://youtube.com/shorts/bn4CWAaTX_E",
         title: "Single leg side to side hops",
         categories: ["low", "middle", "high"],
-        description: "Lorem ipsum"
+        description: () => <div>Verhoog of verlaag telkens de hekjes om de intensiteit van de oefening te veranderen. De voorgetoonde oefening is aan een ‘middel’ intensiteit.<br />*Maak de oefening sport specifiek door het toevoegen van een bal tussenin de sprongen.</div>
     }, {
         url: "https://youtube.com/shorts/oRSXqOAnpTw",
         title: "Forward and backwords two legged jumps",
         categories: ["low", "middle", "high"],
-        description: "Lorem ipsum"
+        description: "Verhoog of verlaag telkens de hekjes om de intensiteit van de oefening te veranderen. De voorgetoonde oefening is aan een ‘middel’ intensiteit."
     }, {
         url: "https://youtube.com/shorts/SH33dwMe50Y",
         title: "Scissor hops",
         categories: ["low", "middle"],
-        description: "Lorem ipsum"
+        description: "Verhoog of verlaag telkens de hekjes om de intensiteit van de oefening te veranderen. De voorgetoonde oefening is aan een ‘middel’ intensiteit."
     }, {
         url: "https://youtu.be/2nx2WUcooXA",
         title: "Turning jump squats",
         categories: ["low", "middle", "high"],
-        description: "Lorem ipsum"
+        description: "Verhoog of verlaag telkens de hekjes om de intensiteit van de oefening te veranderen. De voorgetoonde oefening is aan een ‘middel’ intensiteit."
     }, {
         url: "https://youtube.com/shorts/42yiTBThcfY",
         title: "Seated jumps",
-        categories: ["middle"]
+        categories: ["middle"],
+        description: "Deze oefening behoort tot de categorie ‘middel’ qua intensiteit."
     }, {
         url: "https://youtube.com/shorts/b4qAxmLccnc",
         title: "Kneeling broad jump into tuck jump (hoog)",
-        categories: ["high"]
+        categories: ["high"],
+        description: () => <div>Deze oefening behoort tot de categorie ‘hoog’ qua intensiteit.<br/>*Voeg een kopbal toe om deze oefening sport specifiek te maken.</div>
     }, {
         url: "https://youtube.com/shorts/v25Bn632Mpo",
         title: "Lateral double leg hops",
         categories: ["low", "middle", "high"],
-        description: "Lorem ipsum"
+        description: "Verhoog of verlaag telkens de hekjes om de intensiteit van de oefening te veranderen. De voorgetoonde oefening is aan een ‘middel’ intensiteit."
     }, {
         url: "https://youtube.com/shorts/clYr2Ae2aEY",
         title: "Box drill",
         categories: ["low", "middle", "high"],
-        description: "Lorem ipsum"
+        description: "Verhoog of verlaag telkens de hekjes om de intensiteit van de oefening te veranderen. De voorgetoonde oefening is aan een ‘middel’ intensiteit."
     }, {
         url: "https://youtube.com/shorts/JzDowgvr6-8",
         title: "Skater jumps followed by upward jump",
         categories: ["middle", "high"],
-        description: "Lorem ipsum"
+        description: "Deze oefening wordt uitgevoerd aan ‘middel’ intensiteit. Plaats één hekje in het midden waarover de skater jump wordt uitgevoerd om de intensiteit naar ‘hoog’ te verhogen."
     }, {
         url: "https://youtube.com/shorts/sI2j--PN7fY",
         title: "Stairway weave hops",
         categories: ["low", "middle", "high"],
-        description: "Lorem ipsum"
+        description: "Verhoog of verlaag telkens de hekjes om de intensiteit van de oefening te veranderen. De voorgetoonde oefening is aan een ‘middel’ intensiteit."
     },
 ];
 
