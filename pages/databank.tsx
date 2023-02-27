@@ -33,7 +33,7 @@ const videos: Video[] = [
         url: "https://youtube.com/shorts/pkkxwfoclfs",
         title: "Kneeling hurdle jump",
         categories: ["middle", "high"],
-        description: () => <div>De oefening die wordt uitgebeeld in het filmpje behoort tot de categorie ‘middel’. Indien je gebruik maakt van een hoger hekje schroef je de intensiteit omhoog naar ‘hoog’.<br />*Maak de oefening sport specifiek door het toevoegen van een bal.</div>
+        description: <div>De oefening die wordt uitgebeeld in het filmpje behoort tot de categorie ‘middel’. Indien je gebruik maakt van een hoger hekje schroef je de intensiteit omhoog naar ‘hoog’.<br />*Maak de oefening sport specifiek door het toevoegen van een bal.</div>
     }, {
         url: "https://youtu.be/hL1-VL0bmuo",
         title: "Continuous broad jump",
@@ -48,7 +48,7 @@ const videos: Video[] = [
         url: "https://youtube.com/shorts/uRaJwjqrrcw",
         title: "Single leg RD jump",
         categories: ["middle"],
-        description: () => <div>Deze oefening behoort tot de categorie ‘middel’ qua intensiteit.<br />*Maak de oefening sport specifiek door het toevoegen van een bal.</div>
+        description: <div>Deze oefening behoort tot de categorie ‘middel’ qua intensiteit.<br />*Maak de oefening sport specifiek door het toevoegen van een bal.</div>
     }, {
         url: "https://youtube.com/shorts/wTDzTLJfAIc",
         title: "Small to big lateral bounds",
@@ -73,7 +73,7 @@ const videos: Video[] = [
         url: "https://youtube.com/shorts/bn4CWAaTX_E",
         title: "Single leg side to side hops",
         categories: ["low", "middle", "high"],
-        description: () => <div>Verhoog of verlaag telkens de hekjes om de intensiteit van de oefening te veranderen. De voorgetoonde oefening is aan een ‘middel’ intensiteit.<br />*Maak de oefening sport specifiek door het toevoegen van een bal tussenin de sprongen.</div>
+        description: <div>Verhoog of verlaag telkens de hekjes om de intensiteit van de oefening te veranderen. De voorgetoonde oefening is aan een ‘middel’ intensiteit.<br />*Maak de oefening sport specifiek door het toevoegen van een bal tussenin de sprongen.</div>
     }, {
         url: "https://youtube.com/shorts/oRSXqOAnpTw",
         title: "Forward and backwords two legged jumps",
@@ -98,7 +98,7 @@ const videos: Video[] = [
         url: "https://youtube.com/shorts/b4qAxmLccnc",
         title: "Kneeling broad jump into tuck jump (hoog)",
         categories: ["high"],
-        description: () => <div>Deze oefening behoort tot de categorie ‘hoog’ qua intensiteit.<br/>*Voeg een kopbal toe om deze oefening sport specifiek te maken.</div>
+        description: <div>Deze oefening behoort tot de categorie ‘hoog’ qua intensiteit.<br/>*Voeg een kopbal toe om deze oefening sport specifiek te maken.</div>
     }, {
         url: "https://youtube.com/shorts/v25Bn632Mpo",
         title: "Lateral double leg hops",
