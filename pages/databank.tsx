@@ -11,6 +11,7 @@ const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 interface Video {
     url: string;
+    thumbnail: string | null;
     title: string;
     categories: string[];
     description?: string;
