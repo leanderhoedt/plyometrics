@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 interface TooltipProps {
-    message: string;
+    message: string | ReactNode;
     children: ReactNode;
 };
 
