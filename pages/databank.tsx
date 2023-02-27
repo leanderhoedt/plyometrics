@@ -5,7 +5,7 @@ import { InformationCircleIcon } from '@heroicons/react/24/outline';
 import Tooltip from '@/components/Tooltip';
 import { RadioGroup } from '@headlessui/react';
 import { classNames } from '@/helpers';
-import { useState } from 'react';
+import { useState, ReactNode } from 'react';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
@@ -14,7 +14,7 @@ interface Video {
     thumbnail?: string;
     title: string;
     categories: string[];
-    description?: string;
+    description?: string | ReactNode;
 }
 
 const videos: Video[] = [
