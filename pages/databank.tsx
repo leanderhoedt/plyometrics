@@ -188,7 +188,7 @@ const Databank = () => {
                                                     playerVars: { controls: 1 }
                                                 }
                                             }}
-                                            light={thumbnail ? <Image src={thumbnail} width={384} height={288} alt={title} /> : true}
+                                            light={true}
                                             width={384}
                                             height={288}
                                         />
