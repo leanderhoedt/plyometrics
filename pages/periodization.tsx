@@ -57,7 +57,7 @@ const Periodization = () => {
                 <div className="relative overflow-hidden py-16">
 
                     <div className="relative px-6 lg:px-8">
-                        <div className={`mx-auto text-lg ${tableView === 'season' ?'' : 'max-w-7xl'}`}>
+                        <div className={`mx-auto text-lg ${tableView === 'season' ? '' : 'max-w-7xl'}`}>
                             <div className="pb-2 grid grid-cols-3">
                                 <div className="flex flex-wrap">
 
@@ -208,6 +208,7 @@ const Periodization = () => {
                                 betere fitheid. Het trainingsschema is opgesteld volgens het A/C-ratio van Tim Gabett. Wat
                                 houdt dit nu precies in?
                                 <br />
+                                <br />
                                 <b>Acute load</b> = de load van de afgelopen 7 dagen (de effectieve trainingsarbeid die week)
                                 <br />
                                 <b>Chronische load</b> = de load van de afgelopen 28 dagen (de load waarop de spelers zijn
@@ -258,6 +259,39 @@ const Periodization = () => {
                                 <br />
                                 Rust tussen <b>herhalingen</b>: maximaal <b>15</b> seconden
                             </p>
+                        </div>
+
+                        <div className="mx-auto max-w-7xl text-lg mt-16">
+                            <h1>
+                                <span className="mt-2 block text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                                    Stap 5: Wat te doen indien één of meerdere spelers een sessie missen?
+                                </span>
+                            </h1>
+                            <p className="mt-8 text-xl leading-8 text-gray-600">
+                                Indien een speler een voorgaande sessie mist pikt hij aan met de groep in dezelfde week, hij
+                                zal van zowel laag en middel hetzelfde doen als de rest. Enkel bij de hoge reeks zal de speler
+                                één reeks minder uitvoeren.
+                            </p>
+                            <p className="mt-4 text-xl leading-8 text-gray-600">
+                                Als we bijvoorbeeld kijken naar cyclus 1; Fase 2; week 1 kijken dan zal het hele team het volgende uitvoeren:
+                            </p>
+                            <div className="prose prose-lg prose-amber mt-6 text-gray-600">
+                                <ul>
+                                    <li>Laag: 8x10</li>
+                                    <li>Middel: 2x8</li>
+                                    <li>Hoog: 1x5</li>
+                                </ul>
+                            </div>
+                            <p className="mt-4 text-xl leading-8 text-gray-600">
+                                De afwezige speler(s) zullen dan het volgende uitvoeren diezelfde week:
+                            </p>
+                            <div className="prose prose-lg prose-amber mt-6 text-gray-600">
+                                <ul>
+                                    <li>Laag: 8x10</li>
+                                    <li>Middel: 2x8</li>
+                                    <li>Hoog: /</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
